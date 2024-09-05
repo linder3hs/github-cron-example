@@ -1,8 +1,8 @@
-name: Cron Job cada 3 minutos
+name: Cron Job cada 5 minutos
 
 on:
   schedule:
-    - cron: "*/3 * * * *"
+    - cron: "*/5 * * * *" # Ejecuta la acción cada 5 minutos
 
 jobs:
   cron-job:
@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Mostrar mensaje
-        run: echo "Esto se ejecuta cada 3 minutos"
+        run: echo "Esto se ejecuta cada 5 minutos"
 
       - name: Mostrar fecha y hora actuales
         run: date
