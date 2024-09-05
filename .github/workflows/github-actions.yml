@@ -1,0 +1,13 @@
+name: Github actions demo
+on: [push]
+jobs:
+  Aprendiendo-github-action-con-un-CRON:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Empezando con nuestro cron event ${{ github.event_name }}"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - run: echo "El respositorio es ${{github.repository}}, esta siendo clonado en ${GITHUB_WORKSPACE}
+      - name: Listar los archivos clonaods
+        run: ls -la $GITHUB_WORKSPACE
+      - run: echo "Este es el estadi actual ${{job.status}}"
