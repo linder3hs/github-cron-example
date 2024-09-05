@@ -1,0 +1,16 @@
+name: Cron Job cada 3 minutos
+
+on:
+  schedule:
+    - cron: "*/3 * * * *"
+
+jobs:
+  cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mostrar mensaje
+        run: echo "Esto se ejecuta cada 3 minutos"
+
+      - name: Mostrar fecha y hora actuales
+        run: date
