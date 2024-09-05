@@ -1,5 +1,9 @@
 # Github actions
 
+## Introducción
+
+GitHub Actions es una herramienta de automatización que te permite crear flujos de trabajo personalizados para tu repositorio. Puedes usar acciones predefinidas o crear las tuyas propias para automatizar tareas como la ejecución de pruebas, la generación de informes, la publicación de artefactos y mucho más.
+
 ## Explicación de `hello-world.yml`:
 
 on: push: Esta acción se ejecuta cuando haces un push en cualquier rama.

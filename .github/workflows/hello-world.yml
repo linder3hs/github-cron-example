@@ -7,7 +7,7 @@ on:
       - "*"
 
 jobs:
-  say-hello:
+  hola-desde-codigo-devops:
     runs-on: ubuntu-latest # El entorno donde se ejecutará la acción
 
     steps:
@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3 # Clona el repositorio para usarlo en la acción
 
       - name: Echo Hola Mundo
-        run: echo "Hola Mundo!" # Ejecuta un comando simple para mostrar el texto
+        run: echo "Hola Mundo! ${{github.sha}}" # Ejecuta un comando simple para mostrar el texto
 
       - name: Mostrar fecha actual
         run: date # Muestra la fecha actual del sistema
