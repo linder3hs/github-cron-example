@@ -1,0 +1,26 @@
+name: Hello World Action
+
+# Ejecuta esta acción cuando se hace un push a cualquier rama
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest # El entorno donde se ejecutará la acción
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3 # Clona el repositorio para usarlo en la acción
+
+      - name: Echo Hola Mundo
+        run: echo "Hola Mundo!" # Ejecuta un comando simple para mostrar el texto
+
+      - name: Mostrar fecha actual
+        run: date # Muestra la fecha actual del sistema
+
+      - name: Usar salida condicional
+        run: |
+          echo "Este mensaje se verá si el push fue exitoso"
+        if: success() # Solo muestra esto si el push fue exitoso
